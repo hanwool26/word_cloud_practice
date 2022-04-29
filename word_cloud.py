@@ -29,6 +29,6 @@ class Word_Cloud():
 
         try:
             cloud.to_file(result_path)
-            return cloud
+            return result_path
         except Exception as e:
             print(e)

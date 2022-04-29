@@ -2,7 +2,14 @@ from word_cloud import *
 from excel import *
 import matplotlib.pyplot as plt
 
+from mywindow import *
+
 if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    mywindow = MyWindow()
+    mywindow.show()
+    app.exec_()
+    '''
     file = extract_excel('sample.xlsx')
     wc = Word_Cloud(file, 40)
     wc.make_cloud()
@@ -12,3 +19,4 @@ if __name__ == '__main__':
     plt.axis('off')
     plt.imshow(result_file)
     plt.show()
+    '''

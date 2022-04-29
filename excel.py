@@ -14,7 +14,9 @@ def extract_excel(file_path):
     pre = ws.rows
 
     with open(text_path, 'w', encoding='UTF-8') as f:
-        for r in ws.rows:
+        for idx, r in enumerate(ws.rows):
+            if idx == 0:
+                continue
             f.write(f'%s\n' % (r[1].value))
 
     return text_path
