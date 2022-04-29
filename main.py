@@ -1,12 +1,15 @@
 from word_cloud import *
 from excel import *
 import matplotlib.pyplot as plt
-
+import qdarkstyle
+from PyQt5.QtWidgets import *
 from mywindow import *
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    app.setStyle('Fusion')
     mywindow = MyWindow()
+    app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
     mywindow.show()
     app.exec_()
     '''
